@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://ri6atrae3rrh"]
 
-[ext_resource type="Script" uid="uid://xpdfuixs7hkq" path="res://intro.gd" id="1_865bt"]
+[ext_resource type="Script" uid="uid://xpdfuixs7hkq" path="res://Scripts/intro.gd" id="1_865bt"]
 [ext_resource type="Texture2D" uid="uid://dt3owk4yi0igo" path="res://Assets/intro_menu/intro.png" id="2_dsk78"]
 
 [sub_resource type="Animation" id="Animation_pimde"]
