@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c0tjas83ex656"]
 
-[ext_resource type="Script" uid="uid://dnsvi1hdkc8al" path="res://Scripts/WayPointManager.gd" id="1_1jni3"]
+[ext_resource type="Script" uid="uid://ho7m1bmuyj2a" path="res://Scripts/WayPointManager.gd" id="1_1jni3"]
 [ext_resource type="PackedScene" uid="uid://cfidevvkjgwt4" path="res://Cenas/Roots/way_point_root.tscn" id="3_e4pc8"]
 
 [node name="WayPointsManager" type="Node2D" groups=["WayPointManagerGroup"]]

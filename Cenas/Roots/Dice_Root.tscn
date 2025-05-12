@@ -1,13 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://w50kimt814vq"]
+[gd_scene load_steps=9 format=3 uid="uid://w50kimt814vq"]
 
-[ext_resource type="Script" uid="uid://iufr04r41iwk" path="res://Scripts/Dice.gd" id="1_ogdkt"]
+[ext_resource type="Script" uid="uid://2or20pxnxget" path="res://Scripts/Dice.gd" id="1_ogdkt"]
 [ext_resource type="Texture2D" uid="uid://dks5l5cfa5tf7" path="res://Assets/dado_faces/Dice_6.png" id="2_32mp6"]
+[ext_resource type="Texture2D" uid="uid://cxmutgkehvi6g" path="res://Assets/dado_faces/Dice_1.png" id="2_ps7p7"]
+[ext_resource type="Texture2D" uid="uid://vf1dg3d4gn4i" path="res://Assets/dado_faces/Dice_2.png" id="3_f3wbk"]
+[ext_resource type="Texture2D" uid="uid://c26mr12cwwjmn" path="res://Assets/dado_faces/Dice_3.png" id="4_sv62b"]
+[ext_resource type="Texture2D" uid="uid://c62radhun3u3w" path="res://Assets/dado_faces/Dice_4.png" id="5_qk7fy"]
+[ext_resource type="Texture2D" uid="uid://c48tte572wfdy" path="res://Assets/dado_faces/Dice_5.png" id="6_dg7yx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k7pd0"]
 size = Vector2(185, 197)
 
-[node name="Dice" type="Node2D"]
+[node name="DiceRoot" type="Node2D" node_paths=PackedStringArray("Maindice")]
 script = ExtResource("1_ogdkt")
+Maindice = NodePath("Sprite2D_MainDice")
+DicesSpriteArray = Array[Texture2D]([ExtResource("2_ps7p7"), ExtResource("3_f3wbk"), ExtResource("4_sv62b"), ExtResource("5_qk7fy"), ExtResource("6_dg7yx"), ExtResource("2_32mp6")])
+IsAutoDiceRoll = true
 
 [node name="Sprite2D_MainDice" type="Sprite2D" parent="."]
 texture = ExtResource("2_32mp6")

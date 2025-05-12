@@ -6,18 +6,11 @@ extends Node2D
 @export var GreenPieces : PlayerPiecesGroup
 @export var RedPieces : PlayerPiecesGroup
 	
-func IsGameOver()->bool:
-	
-	if BluePieces.HasThisPlayerCompleted() == false:
-		return false
-	elif PurplePieces.HasThisPlayerCompleted() == false:
-		return false
-	elif GreenPieces.HasThisPlayerCompleted() == false:
-		return false
-	elif  RedPieces.HasThisPlayerCompleted() == false:
-		return false
-		
-	return true
+func IsGameOver() -> bool:
+	for player in get_children():
+		if player is PlayerPiecesGroup and player.HasThisPlayerCompleted():
+			return true
+	return false
 
 func GetPieceGroupBasedOnType(playerColor:GameManager.PlayerColor)->PlayerPiecesGroup:
 	match playerColor:

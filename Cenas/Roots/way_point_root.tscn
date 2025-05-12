@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cfidevvkjgwt4"]
 
-[ext_resource type="Script" uid="uid://do0e8bcdidvgu" path="res://Scripts/WayPoint.gd" id="1_sphsi"]
+[ext_resource type="Script" uid="uid://dxdydc7y2a78q" path="res://Scripts/WayPoint.gd" id="1_sphsi"]
 
 [node name="WayPoint_Root" type="Node2D"]
 script = ExtResource("1_sphsi")

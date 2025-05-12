@@ -152,16 +152,16 @@ func UpdatePlayerTurn() -> void:
 		pass
 
 	match currentPlayerTurnIndex:
-		0:
+		3:
 			currentPlayerColor = GameManager.PlayerColor.Green
 			pass
-		1:
+		2:
 			currentPlayerColor = GameManager.PlayerColor.Purple
 			pass
-		2:
+		1:
 			currentPlayerColor = GameManager.PlayerColor.Blue
 			pass
-		3:
+		0:
 			currentPlayerColor = GameManager.PlayerColor.Red
 			pass
 	
@@ -171,16 +171,15 @@ func UpdatePlayerTurn() -> void:
 		print("is game over!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
 		return
 	
+	# Obtém o grupo de peças do jogador atual
 	var pieceGroup = piecesManager.GetPieceGroupBasedOnType(currentPlayerColor)
 	
-	if pieceGroup!=null && pieceGroup.HasThisPlayerCompleted() == true:
-		print("update player turn again because ",currentPlayerColor," has completed game")
-		UpdatePlayerTurn()
-		return
-		
-	#play place animation to suggest use it's your turn to roll dice
+	if pieceGroup != null && pieceGroup.HasThisPlayerCompleted():
+		print("Player ", currentPlayerColor, " has completed the game - skipping turn")
+		UpdatePlayerTurn()  # Chama recursivamente para pular jogadores que já completaram
+		return    
+	# Ativa animação para indicar o turno do jogador
 	PlayPlaceAnimation()
-	pass
 
 func PlayPlaceAnimation()-> void:
 	

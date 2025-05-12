@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://d0a1jhx06eoed"]
 
-[ext_resource type="Script" uid="uid://cd3ka0d6juxxo" path="res://Scripts/PiecesManager.gd" id="1_j84s7"]
-[ext_resource type="Script" uid="uid://bk5wqdmleve3j" path="res://Scripts/PlayerPieceGroup.gd" id="2_j84s7"]
+[ext_resource type="Script" uid="uid://dsrl650wj85ff" path="res://Scripts/PiecesManager.gd" id="1_j84s7"]
+[ext_resource type="Script" uid="uid://b888aignd8aa1" path="res://Scripts/PlayerPieceGroup.gd" id="2_j84s7"]
 [ext_resource type="PackedScene" uid="uid://dnheqaelp65l5" path="res://Cenas/piece_green.tscn" id="3_wvx6k"]
 [ext_resource type="PackedScene" uid="uid://0nr1mveoa2rq" path="res://Cenas/piece_red.tscn" id="5_spkay"]
 [ext_resource type="PackedScene" uid="uid://c0oa7g2nxwrdf" path="res://Cenas/piece_purple.tscn" id="6_0ulql"]
@@ -14,42 +14,74 @@ script = ExtResource("1_j84s7")
 script = ExtResource("2_j84s7")
 
 [node name="Piece_green" parent="Green" instance=ExtResource("3_wvx6k")]
-position = Vector2(82, 129)
+position = Vector2(84, 147)
 scale = Vector2(0.13, 0.13)
 
 [node name="Piece_green2" parent="Green" instance=ExtResource("3_wvx6k")]
-position = Vector2(137, 129)
+position = Vector2(139, 147)
+scale = Vector2(0.13, 0.13)
+
+[node name="Piece_green3" parent="Green" instance=ExtResource("3_wvx6k")]
+position = Vector2(139, 99)
+scale = Vector2(0.13, 0.13)
+
+[node name="Piece_green4" parent="Green" instance=ExtResource("3_wvx6k")]
+position = Vector2(80, 96)
 scale = Vector2(0.13, 0.13)
 
 [node name="Red" type="Node2D" parent="."]
 script = ExtResource("2_j84s7")
 
 [node name="Piece_red" parent="Red" instance=ExtResource("5_spkay")]
-position = Vector2(-121, 129)
+position = Vector2(-118, 151)
 scale = Vector2(0.13, 0.13)
 
 [node name="Piece_red2" parent="Red" instance=ExtResource("5_spkay")]
-position = Vector2(-174, 129)
+position = Vector2(-171, 151)
+scale = Vector2(0.13, 0.13)
+
+[node name="Piece_red3" parent="Red" instance=ExtResource("5_spkay")]
+position = Vector2(-116, 102)
+scale = Vector2(0.13, 0.13)
+
+[node name="Piece_red4" parent="Red" instance=ExtResource("5_spkay")]
+position = Vector2(-171, 102)
 scale = Vector2(0.13, 0.13)
 
 [node name="Purple" type="Node2D" parent="."]
 script = ExtResource("2_j84s7")
 
 [node name="Piece_purple" parent="Purple" instance=ExtResource("6_0ulql")]
-position = Vector2(137, -148)
+position = Vector2(141, -178)
 scale = Vector2(0.13, 0.13)
 
 [node name="Piece_purple2" parent="Purple" instance=ExtResource("6_0ulql")]
-position = Vector2(86, -148)
+position = Vector2(90, -178)
+scale = Vector2(0.13, 0.13)
+
+[node name="Piece_purple3" parent="Purple" instance=ExtResource("6_0ulql")]
+position = Vector2(144, -128)
+scale = Vector2(0.13, 0.13)
+
+[node name="Piece_purple4" parent="Purple" instance=ExtResource("6_0ulql")]
+position = Vector2(90, -128)
 scale = Vector2(0.13, 0.13)
 
 [node name="Blue" type="Node2D" parent="."]
 script = ExtResource("2_j84s7")
 
 [node name="Piece_blue" parent="Blue" instance=ExtResource("7_fx2sx")]
-position = Vector2(-122, -151)
+position = Vector2(-121, -177)
 scale = Vector2(0.13, 0.13)
 
 [node name="Piece_blue2" parent="Blue" instance=ExtResource("7_fx2sx")]
-position = Vector2(-177, -151)
+position = Vector2(-176, -177)
+scale = Vector2(0.13, 0.13)
+
+[node name="Piece_blue3" parent="Blue" instance=ExtResource("7_fx2sx")]
+position = Vector2(-174, -130)
+scale = Vector2(0.13, 0.13)
+
+[node name="Piece_blue4" parent="Blue" instance=ExtResource("7_fx2sx")]
+position = Vector2(-119, -131)
 scale = Vector2(0.13, 0.13)

@@ -40,9 +40,8 @@ func _on_game_current_state_change(updatedState:GameManager.GameStateEnum)->void
 	pass
 
 func GetPieceForAI()->Piece:
-	var rng = RandomNumberGenerator.new()
-	rng.randomize()  # importante para não gerar sempre a mesma sequência
-	var randomNum:int = rng.randi_range(0, 4)
+	var randomNum:int = RandomNumberGenerator.new().randf_range(0,4)
+	#Pieces[randomNum].AIInput()
 	
 	if Pieces[randomNum].IsInHome:
 		var tempCheck:bool = HasThisPlayerCompleted()

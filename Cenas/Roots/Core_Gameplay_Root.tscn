@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cvysb1um2g7ov" path="res://Cenas/board_game_play.tscn" id="1_ghi2f"]
 [ext_resource type="PackedScene" uid="uid://d0a1jhx06eoed" path="res://Cenas/Roots/pieces_root.tscn" id="2_hmhd1"]
-[ext_resource type="Script" uid="uid://bbpl5ggodhohs" path="res://Scripts/BoardManager.gd" id="2_mpruf"]
+[ext_resource type="Script" uid="uid://b1hegh2ujwr1d" path="res://Scripts/BoardManager.gd" id="2_mpruf"]
 [ext_resource type="PackedScene" uid="uid://w50kimt814vq" path="res://Cenas/Roots/Dice_Root.tscn" id="3_ckp7n"]
 [ext_resource type="PackedScene" uid="uid://c0tjas83ex656" path="res://Cenas/way_points_root.tscn" id="4_mpruf"]
 
