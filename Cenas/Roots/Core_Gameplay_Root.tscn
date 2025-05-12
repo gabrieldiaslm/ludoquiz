@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://rta00301v2q3"]
+
+[ext_resource type="PackedScene" uid="uid://cvysb1um2g7ov" path="res://Cenas/board_game_play.tscn" id="1_ghi2f"]
+[ext_resource type="PackedScene" uid="uid://d0a1jhx06eoed" path="res://Cenas/Roots/pieces_root.tscn" id="2_hmhd1"]
+[ext_resource type="Script" uid="uid://bbpl5ggodhohs" path="res://Scripts/BoardManager.gd" id="2_mpruf"]
+[ext_resource type="PackedScene" uid="uid://w50kimt814vq" path="res://Cenas/Roots/Dice_Root.tscn" id="3_ckp7n"]
+[ext_resource type="PackedScene" uid="uid://c0tjas83ex656" path="res://Cenas/way_points_root.tscn" id="4_mpruf"]
+
+[node name="CoreGameplay" type="Node2D"]
+
+[node name="Board" type="Node2D" parent="."]
+
+[node name="board_GamePlay" parent="Board" groups=["BoardManager"] instance=ExtResource("1_ghi2f")]
+script = ExtResource("2_mpruf")
+
+[node name="Piece" parent="." instance=ExtResource("2_hmhd1")]
+
+[node name="Dice" type="Node2D" parent="."]
+
+[node name="DiceRoot" parent="Dice" instance=ExtResource("3_ckp7n")]
+position = Vector2(2, 269)
+scale = Vector2(0.485, 0.485)
+
+[node name="WayPointsManager" parent="." instance=ExtResource("4_mpruf")]
+
+[connection signal="OnDiceRollBegin" from="Dice/DiceRoot" to="Board/board_GamePlay" method="_on_dice_root_on_dice_roll_begin"]
+[connection signal="OnDiceRolled" from="Dice/DiceRoot" to="Board/board_GamePlay" method="_on_dice_root_on_dice_rolled"]

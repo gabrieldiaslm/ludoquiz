@@ -12,7 +12,7 @@ func _process(delta: float) -> void:
 
 
 func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://Cenas/board.tscn")
+	get_tree().change_scene_to_file("res://Level/Level_MainGameplay.tscn")
 	print('start')
 
 

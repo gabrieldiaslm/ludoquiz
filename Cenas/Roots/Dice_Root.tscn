@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://w50kimt814vq"]
+
+[ext_resource type="Script" uid="uid://iufr04r41iwk" path="res://Scripts/Dice.gd" id="1_ogdkt"]
+[ext_resource type="Texture2D" uid="uid://dks5l5cfa5tf7" path="res://Assets/dado_faces/Dice_6.png" id="2_32mp6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k7pd0"]
+size = Vector2(185, 197)
+
+[node name="Dice" type="Node2D"]
+script = ExtResource("1_ogdkt")
+
+[node name="Sprite2D_MainDice" type="Sprite2D" parent="."]
+texture = ExtResource("2_32mp6")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_k7pd0")

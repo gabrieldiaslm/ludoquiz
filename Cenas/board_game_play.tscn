@@ -1,0 +1,158 @@
+[gd_scene load_steps=12 format=3 uid="uid://cvysb1um2g7ov"]
+
+[ext_resource type="PackedScene" uid="uid://ctndbqe7w8shh" path="res://Cenas/Roots/Board_Root.tscn" id="1_8cxtw"]
+[ext_resource type="Texture2D" uid="uid://crm5s6q45te5b" path="res://Assets/mapa/GreenPlace.png" id="3_q17js"]
+[ext_resource type="Texture2D" uid="uid://caukmk6ulawe3" path="res://Assets/mapa/PurplePlace.png" id="4_rb6k3"]
+[ext_resource type="Texture2D" uid="uid://sh5rkwan711l" path="res://Assets/mapa/BluePlace.png" id="5_2urvn"]
+[ext_resource type="Texture2D" uid="uid://cpqxxkm625c41" path="res://Assets/mapa/RedPlace.png" id="6_m1vg3"]
+
+[sub_resource type="Animation" id="Animation_d2evv"]
+resource_name = "BluePlaceAnimation"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D_Board/Sprite2D_Blue:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.501961, 0.501961, 0.501961, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_t1nlm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D_Board/Sprite2D_Blue:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D_Board/Sprite2D_Green:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D_Board/Sprite2D_Purple:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D_Board/Sprite2D_Red:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_q17js"]
+resource_name = "GreenPlaceAnimation"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D_Board/Sprite2D_Green:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.501961, 0.501961, 0.501961, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_rb6k3"]
+resource_name = "PurplePlaceAnimation"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D_Board/Sprite2D_Purple:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.501961, 0.501961, 0.501961, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_2urvn"]
+resource_name = "RedPlaceAnimation"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D_Board/Sprite2D_Red:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.501961, 0.501961, 0.501961, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_m1vg3"]
+_data = {
+&"BluePlaceAnimation": SubResource("Animation_d2evv"),
+&"GreenPlaceAnimation": SubResource("Animation_q17js"),
+&"PurplePlaceAnimation": SubResource("Animation_rb6k3"),
+&"RESET": SubResource("Animation_t1nlm"),
+&"RedPlaceAnimation": SubResource("Animation_2urvn")
+}
+
+[node name="board_GamePlay" instance=ExtResource("1_8cxtw")]
+
+[node name="Sprite2D_Green" type="Sprite2D" parent="Sprite2D_Board" index="0"]
+position = Vector2(113, 130)
+scale = Vector2(0.121, 0.121)
+texture = ExtResource("3_q17js")
+
+[node name="Sprite2D_Purple" type="Sprite2D" parent="Sprite2D_Board" index="1"]
+position = Vector2(113, -150)
+scale = Vector2(0.121, 0.121)
+texture = ExtResource("4_rb6k3")
+
+[node name="Sprite2D_Blue" type="Sprite2D" parent="Sprite2D_Board" index="2"]
+position = Vector2(-149, -148)
+scale = Vector2(0.121, 0.121)
+texture = ExtResource("5_2urvn")
+
+[node name="Sprite2D_Red" type="Sprite2D" parent="Sprite2D_Board" index="3"]
+position = Vector2(-149, 129)
+scale = Vector2(0.121, 0.121)
+texture = ExtResource("6_m1vg3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
+libraries = {
+&"": SubResource("AnimationLibrary_m1vg3")
+}

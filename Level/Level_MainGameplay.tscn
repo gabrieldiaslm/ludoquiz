@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cg0dgxdo1aae4"]
+
+[ext_resource type="PackedScene" uid="uid://rta00301v2q3" path="res://Cenas/Roots/Core_Gameplay_Root.tscn" id="1_g104l"]
+
+[node name="LevelMainGameplay" type="Node2D"]
+
+[node name="CoreGameplay" parent="." instance=ExtResource("1_g104l")]
+
+[node name="Camera2D" type="Camera2D" parent="."]

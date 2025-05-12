@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=3 uid="uid://d0a1jhx06eoed"]
+
+[ext_resource type="Script" uid="uid://cd3ka0d6juxxo" path="res://Scripts/PiecesManager.gd" id="1_j84s7"]
+[ext_resource type="Script" uid="uid://bk5wqdmleve3j" path="res://Scripts/PlayerPieceGroup.gd" id="2_j84s7"]
+[ext_resource type="PackedScene" uid="uid://dnheqaelp65l5" path="res://Cenas/piece_green.tscn" id="3_wvx6k"]
+[ext_resource type="PackedScene" uid="uid://0nr1mveoa2rq" path="res://Cenas/piece_red.tscn" id="5_spkay"]
+[ext_resource type="PackedScene" uid="uid://c0oa7g2nxwrdf" path="res://Cenas/piece_purple.tscn" id="6_0ulql"]
+[ext_resource type="PackedScene" uid="uid://b6r0piwh25ah5" path="res://Cenas/piece_blue.tscn" id="7_fx2sx"]
+
+[node name="Piece" type="Node2D"]
+script = ExtResource("1_j84s7")
+
+[node name="Green" type="Node2D" parent="."]
+script = ExtResource("2_j84s7")
+
+[node name="Piece_green" parent="Green" instance=ExtResource("3_wvx6k")]
+position = Vector2(82, 129)
+scale = Vector2(0.13, 0.13)
+
+[node name="Piece_green2" parent="Green" instance=ExtResource("3_wvx6k")]
+position = Vector2(137, 129)
+scale = Vector2(0.13, 0.13)
+
+[node name="Red" type="Node2D" parent="."]
+script = ExtResource("2_j84s7")
+
+[node name="Piece_red" parent="Red" instance=ExtResource("5_spkay")]
+position = Vector2(-121, 129)
+scale = Vector2(0.13, 0.13)
+
+[node name="Piece_red2" parent="Red" instance=ExtResource("5_spkay")]
+position = Vector2(-174, 129)
+scale = Vector2(0.13, 0.13)
+
+[node name="Purple" type="Node2D" parent="."]
+script = ExtResource("2_j84s7")
+
+[node name="Piece_purple" parent="Purple" instance=ExtResource("6_0ulql")]
+position = Vector2(137, -148)
+scale = Vector2(0.13, 0.13)
+
+[node name="Piece_purple2" parent="Purple" instance=ExtResource("6_0ulql")]
+position = Vector2(86, -148)
+scale = Vector2(0.13, 0.13)
+
+[node name="Blue" type="Node2D" parent="."]
+script = ExtResource("2_j84s7")
+
+[node name="Piece_blue" parent="Blue" instance=ExtResource("7_fx2sx")]
+position = Vector2(-122, -151)
+scale = Vector2(0.13, 0.13)
+
+[node name="Piece_blue2" parent="Blue" instance=ExtResource("7_fx2sx")]
+position = Vector2(-177, -151)
+scale = Vector2(0.13, 0.13)
